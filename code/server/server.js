@@ -10,7 +10,12 @@ const notificationRoutes = require("./routes/notificationRoutes");
 const { startEventReminderService } = require("./services/eventReminderService");
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://alumnetconnect.vercel.app',
+  method: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
