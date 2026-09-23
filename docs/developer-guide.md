@@ -16,6 +16,10 @@ Configure your local environment to run the application and test changes.
 * Install frontend dependencies: `npm install`
 * Repeat the dependency installation process for the backend directory as well. 
 
+### 2.2 Environment Configuration
+* Create or modify the `.env` file within the `code/client` directory
+* Ensure the frontend `.env` points to your local backend server during development (`http://localhost:5173`) rather the production Railway URL.
+
 ## 3. Running the application
 * **Backend Development Server:** Navigate to the backend directory and start the node server. (`node server.js`)
 * **Frontend Development Server:** Navigate to `code/client` and start the React server. (`npm run dev`)
